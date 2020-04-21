@@ -6,20 +6,6 @@ function jediName(firstName, lastName) {
     return name;
 }
 
-/*
-
-    function beyond (num) {
-        if num is infinite,
-        console log "and beyond"
-        if else num > 0,
-        console log "to infinity"
-        if else num < 0,
-        cosnole log "to negative infinity"
-        else
-        console log "staying home"
-    }
-
-*/
 
 function beyond(num) {
     if (num === Infinity || num === -Infinity) {
@@ -33,6 +19,42 @@ function beyond(num) {
     }
 }
 
+function decode(word) {
+    // input word
+    // index =
+    // switch word[0]
+    // a = 2
+    // b=3
+    // c = 4
+    // d = 5
+    //default === space
+     // return word[index]
+    let index = "";
+    switch (word[0]) {
+        case 'a':
+            index = 1;
+            break;
+        case 'b':
+            index = 2;
+            break;
+        case 'c':
+            index = 3;
+            break;
+        case  'd':
+            index = 4;
+            break;
+        default:
+            return ' ';
+    }
+    return word[index];
+}
+let words = 'craft block argon meter bells brown croon droop';
 //Test functions
 console.log(jediName('Kevin', 'Bacon'));
 console.log(beyond(Infinity));
+let array = words.split(" ");
+for (let i =0; i < 8; i++) {
+    console.log(decode(array[i]));
+}
+
+
