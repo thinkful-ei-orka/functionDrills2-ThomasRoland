@@ -41,17 +41,6 @@ function decode(word) {
     return word[index];
 }
 
-//How many days in a month
-//taking in month, leap year
-//switch (month)
-//return days in month
-//(jan mar may >july aug< oct dec)
-//return month has 31 days
-//(feb(not really) apr jun sep nov)
-//return month has 30 days
-//if feb, check leap year
-//default is 'needs a month'
-
 function daysInAMonth(month, leapYear) {
     switch(month) {
     case 'January':
@@ -78,6 +67,47 @@ function daysInAMonth(month, leapYear) {
     }
 }
 
+function rockPaperScissors(num) {
+    const randomNo = Math.floor(Math.random() * 3) + 1;
+    if (num === randomNo) return "it's a tie";
+    if (num === 1) {
+        if (randomNo === 3) {
+            return "you win";
+        } else {return "you lose";}
+    } 
+    if (num === 2) {
+        if (randomNo === 1) {
+        return "you win";
+    } else {return "you lose";
+        }
+    }
+    if (num === 3) {
+        if (randomNo === 2) {
+            return "you win";
+        } else {return "you lose";}
+    }
+    throw "no number found";
+}
+
+// 1 > 3 > 2 > 1
+//check number of input
+//if input === randomnu
+
+// return its a tie
+//if input === 1
+//if randomNo === 3
+    //return 'you win'
+//else return you lose
+//if input === 2 
+//if randomnu === 1
+// return you win
+//else return you lose
+//if input ===3
+//if randomnu ==2
+//you win
+//else return you lose
+
+//throw 'no number found'
 
 
 //Test functions
@@ -93,5 +123,5 @@ for (let i =0; i < 8; i++) {
 console.log(decodedWord);
 console.log(daysInAMonth('January'));
 console.log(daysInAMonth('February', true));
-console.log(daysInAMonth('haha'));
-
+// console.log(daysInAMonth('haha'));
+console.log(rockPaperScissors(1));
